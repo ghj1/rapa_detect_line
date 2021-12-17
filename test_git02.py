@@ -36,20 +36,40 @@ def callback(data):
     right2 = right_img2.mean()
     min = np.argmin([left1, left2, cent, right1, right2])
 
-    if min == 0:
-        pass
-    elif min == 1:  
-        pass
-    elif min == 2:
-        pass
-    elif min == 3:
-        pass
-    elif min == 4:
-        pass    
+    pub = rospy.Publisher('/cmd_vel', Twist, queue_size=10)   # topic이름 (sub = pub 이름 동일)
+    twist = Twist()
+
+    twist.linear.y = twist.linear.z = 0.0
+    twist.angular.x = twist.angular.y = twist.angular.z = 0
+    
+    if key == 0: 
+        twist.linear.x = 1.0
+        twist.angular.z = 1.0
+        pub.publish(twist)
+
+    elif key == 1:
+        twist.linear.x = 1.0
+        twist.angular.z = 0.5
+        pub.publish(twist)
+
+    elif key == 2:
+        twist.linear.x = 1.0
+        twist.angular.z = 0.0
+        pub.publish(twist)
+
+    elif key == 3:
+        twist.linear.x = 1.0
+        twist.angular.z = -0.5
+
+        pub.publish(twist)
+
+    elif key == 4':
+        twist.linear.x = 1.0
+        twist.angular.z = -1.0
+        pub.publish(twist)
+
     else:
         pass
-
-
 
 
     # pub = rospy.Publisher('/cmd_vel',Twist,queue_size=10)
