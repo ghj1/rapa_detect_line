@@ -37,10 +37,13 @@ def callback(data):
     min = np.argmin([left1, left2, cent, right1, right2])
 
     if min == 0:
+
         pass
     elif min == 1:  
+
         pass
     elif min == 2:
+
         pass
     elif min == 3:
         pass
@@ -64,6 +67,7 @@ def main():
 
 if __name__ == '__main__':
     main()
+
     pass
 
 
