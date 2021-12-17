@@ -9,10 +9,7 @@ from geometry_msgs.msg import Twist
 
 
 bridge = CvBridge()
-direction = ''
 
-tolerance = 5
-slow = 30
 def callback(data):
     frame = bridge.imgmsg_to_cv2(data,'bgr8')
     frameb = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
