@@ -31,13 +31,15 @@ def callback(data):
 
     cv2.imshow('frame',frame)
     key = cv2.waitKey(1)
-
+ 
     left1 = left_img1.mean()
     left2 = left_img2.mean()
+    cent  = cent_img.mean()
     right1 = right_img1.mean()
     right2 = right_img2.mean()
-    min = np.argmin([left1, left2, right1, right2])
+    min = np.argmin([left1, left2, cent, right1, right2])
     print(min)
+
     if min == 0:
         pass
     elif min == 1:  
