@@ -38,12 +38,11 @@ if __name__ == '__main__':
         elif key == '4':
             twist.linear.x = 1.0
             twist.angular.z = -0.5
-
             pub.publish(twist)
 
         elif key == '5':
-            twist.linear.x = 1.0
-            twist.angular.z = -1.0
+            twist.linear.x = 0.0
+            twist.angular.z = 0.0
             pub.publish(twist)
 
         elif key == 'q':
