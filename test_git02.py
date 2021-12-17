@@ -35,7 +35,6 @@ def callback(data):
     right1 = right_img1.mean()
     right2 = right_img2.mean()
     min = np.argmin([left1, left2, cent, right1, right2])
-    print(min)
 
     if min == 0:
         pass
@@ -45,6 +44,8 @@ def callback(data):
         pass
     elif min == 3:
         pass
+    elif min == 4:
+        pass    
     else:
         pass
 
